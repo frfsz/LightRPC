@@ -1,0 +1,27 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.ace.rpc.core.RpcProperties",
+      "name": "ace.rpc",
+      "type": "com.ace.rpc.core.RpcProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.ace.rpc.core.RpcProperties",
+      "name": "ace.rpc.base-package",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.ace.rpc.core.RpcProperties",
+      "name": "ace.rpc.enabled",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.ace.rpc.core.RpcProperties",
+      "name": "ace.rpc.registry",
+      "type": "com.ace.rpc.core.RpcRegistryProperties"
+    }
+  ]
+}
