@@ -10,11 +10,13 @@
   "properties": [
     {
       "sourceType": "com.ace.rpc.core.RpcProperties",
+      "defaultValue": "classpath",
       "name": "ace.rpc.base-package",
       "type": "java.lang.String"
     },
     {
       "sourceType": "com.ace.rpc.core.RpcProperties",
+      "defaultValue": false,
       "name": "ace.rpc.enabled",
       "type": "java.lang.Boolean"
     },

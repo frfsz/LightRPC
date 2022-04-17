@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-@DependsOn("remoteClientFactory")
+@DependsOn("rpcClientFactory")
 @Service
 /**
  * @description 声明注入的所在类为远程调度端，该注解继承@Service特性

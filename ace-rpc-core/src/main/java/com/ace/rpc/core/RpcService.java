@@ -15,7 +15,7 @@ import org.springframework.context.annotation.DependsOn;
 @Documented
 @Retention(RUNTIME)
 @Target(TYPE)
-@DependsOn("remoteClientFactory")
+@DependsOn("rpcClientFactory")
 /**
  * @description 远程接口调用,只能加载interface接口类上,加此注解的类，所有传输对象必须实现序列化接口，否则会在传输时报错
  * @author fengsheng
