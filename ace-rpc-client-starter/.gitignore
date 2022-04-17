@@ -32,3 +32,4 @@ hs_err_pid*
 .sts4-cache
 
 target/
+target
