@@ -7,10 +7,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+import javax.annotation.Resource;
+
 import org.reflections.Reflections;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
@@ -33,10 +34,10 @@ public class RpcClientFactory {
 
     private static Reflections reflections;
 
-    @Autowired
+    @Resource
     private RpcProperties rpcProperties;
 
-    @Autowired
+    @Resource
     public void initRemoteClient(ApplicationContext context) {
         reflections = new Reflections(rpcProperties.getBasePackage());
         log.info("Init rpc Client");
