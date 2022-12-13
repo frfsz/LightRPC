@@ -1,2 +1,2 @@
-# ace-rpc
- rpc
+# 一个轻量级RPC调度框架
+ ACE RPC是在JAVA RMI组件上构建的，方便使用，且对业务无入侵，性能优于restful，非常适合于中小型项目，省掉三方组件维护成本，如dubbo等之类的框架。
