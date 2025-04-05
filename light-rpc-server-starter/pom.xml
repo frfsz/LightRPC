@@ -11,23 +11,25 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
-	
+
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.github.frfsz</groupId>
-	<artifactId>light-rpc-parent</artifactId>
+	<artifactId>light-rpc-server-starter</artifactId>
 	<version>2.0.2</version>
-	<packaging>pom</packaging>
-	<name>light-rpc-parent</name>
-	
-	<modules>
-		<module>light-rpc-core</module>
-		<module>light-rpc-server</module>
-		<module>light-rpc-client</module>
-		<module>light-rpc-server-starter</module>
-		<module>light-rpc-client-starter</module>
-	</modules>
-	
+	<packaging>jar</packaging>
+	<name>light-rpc-server-starter</name>
+
 	<dependencies>
+		<dependency>
+			<groupId>io.github.frfsz</groupId>
+			<artifactId>light-rpc-server</artifactId>
+			<version>2.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.reflections</groupId>
+			<artifactId>reflections</artifactId>
+			<version>0.9.11</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot</artifactId>
@@ -40,29 +42,13 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-autoconfigure</artifactId>
+  			<artifactId>spring-boot-autoconfigure</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 		</dependency>
 	</dependencies>
-
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.reflections</groupId>
-				<artifactId>reflections</artifactId>
-				<version>0.9.11</version>
-			</dependency>
-			<dependency>
-				<groupId>io.github.frfsz</groupId>
-				<artifactId>light-rpc-core</artifactId>
-				<version>2.0.2</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -72,6 +58,18 @@
 					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
