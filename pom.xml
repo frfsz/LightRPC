@@ -108,6 +108,30 @@
                 </executions>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <tags>
+                        <tag>
+                            <name>description</name>
+                            <placement>a</placement> <!-- 允许在任意位置使用 -->
+                        </tag>
+                        <tag>
+                            <name>date</name>
+                            <placement>a</placement>
+                        </tag>
+                    </tags>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.sonatype.central</groupId>
                 <artifactId>central-publishing-maven-plugin</artifactId>
                 <version>0.7.0</version>
