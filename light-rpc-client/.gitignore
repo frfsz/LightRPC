@@ -30,6 +30,6 @@ hs_err_pid*
 .settings
 .springBeans
 .sts4-cache
-.idea
 
 target/
+target
